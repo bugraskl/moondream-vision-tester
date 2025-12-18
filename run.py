@@ -98,7 +98,7 @@ if uploaded_file and model:
         # --- TAB 2: POINT ---
         with tab2:
             st.info("Find center points of objects in the image.")
-            point_label = st.text_input("What to mark? (e.g., crack, hole, tear)", value="crack")
+            point_label = st.text_input("What to mark? (e.g., car, truck, bus)", value="car")
             
             if st.button("Run Point Detection"):
                 with st.spinner("Searching for points..."):
@@ -127,7 +127,7 @@ if uploaded_file and model:
         # --- TAB 3: DETECT ---
         with tab3:
             st.info("Detect objects with bounding boxes.")
-            detect_label = st.text_input("What to detect?", value="crack")
+            detect_label = st.text_input("What to detect?", value="car")
             
             if st.button("Run Object Detection"):
                 with st.spinner("Detecting objects..."):
